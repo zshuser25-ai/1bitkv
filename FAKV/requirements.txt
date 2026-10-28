@@ -1,0 +1,43 @@
+# Qwen3-4B-Instruct-2507 FAKV_V2 runtime and official v8 evaluation.
+# Target: Ubuntu 22.04 x86_64, Python 3.11/3.12, NVIDIA driver 570+.
+# Clone the COMPLETE FAKV_V2 repository, then run from its root:
+#   python -m pip install -r requirements.txt
+# The final editable dependency needs ./sglang-research/python in this repo.
+# Model weights are external; the small rotation/Fisher assets are in ./assets.
+# See README.md for installation and launch instructions.
+
+# Verified PyTorch/CUDA 12.8 stack.
+torch==2.9.1
+torchvision==0.24.1
+torchaudio==2.9.1
+torchcodec==0.9.1
+triton==3.5.1
+
+# Versions used by the modified SGLang service and Fisher calibration.
+transformers==5.3.0
+sglang-kernel==0.4.1
+flashinfer-python==0.6.7.post3
+flashinfer-cubin==0.6.7.post3
+flash-attn-4==4.0.0b32
+torchao==0.9.0
+accelerate==1.10.1
+cuda-python==12.9.0
+xgrammar==0.1.32
+openai==2.6.1
+numpy==2.2.2
+datasets==3.6.0
+safetensors==0.6.2
+sentencepiece==0.2.2
+einops==0.8.1
+
+# Direct dependencies of the official v8 evaluators.
+absl-py==2.3.1
+immutabledict==4.3.1
+langdetect==1.0.9
+nltk==3.9.1
+rouge==1.0.1
+jieba==0.42.1
+sympy==1.14.0
+pylatexenc==2.11
+
+-e ./sglang-research/python

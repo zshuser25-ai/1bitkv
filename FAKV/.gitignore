@@ -1,0 +1,15 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.venv/
+venv/
+*.log
+*.pid
+experiments/*/logs/
+experiments/*/results/
+models/
+dataset/
+
+# Generated experiment runs: environments, caches, datasets, and outputs.
+runs/
